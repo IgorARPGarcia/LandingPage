@@ -1,0 +1,14 @@
+#navList
+{
+    ul
+    {
+        display: grid;
+        grid-template: 1fr / repeat(5, 1fr);
+    }
+
+    li
+    {
+        display: inline;
+    }
+    
+}
