@@ -1,4 +1,144 @@
-#navList
+@layer reset, base, navigation;
+
+@layer reset
+{
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+
+    html, body
+    {
+        width: 100%;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+}
+
+@layer base
+{
+    :root
+    {
+        --background-color: white;
+        --text-color: black;
+        --primary-color: #48149b;
+        --secondary-color: #23414a;
+        --light-background: #ffffff;
+        --dark-background: #0a181d;
+        --light-text: #ffffff;
+        --dark-text: #000000;
+    }
+
+    @media(prefers-color-scheme: dark)
+    {
+        :root
+        {
+            --background-color: var(--dark-background);
+            --text-color: #ffffff;
+            --secondary-color: #09171b;
+            --light-background: #495057;
+            --dark-background: #000000;
+        }
+    }
+}
+
+@layer base
+{
+    body
+    {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        line-height: 1.6;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: inherit;
+    }
+
+}
+
+@layer navigation
+{
+    header
+    {
+        background: var(--light-background);
+        color: var(--light-text);
+        padding: 20px;
+
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 15px;
+        }
+
+        .logo
+        {
+            font-size: 1.35rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle
+        {
+            font-size: 2rem;
+
+            @media (width > 768px)
+            {
+                display: none;
+            }
+        }
+
+        .navList
+        {
+            display: none;
+            background: var(--dark-background);
+            text-align: right;
+            list-style: none;
+            flex-direction: column;
+
+            &.active
+            {
+                display: flex;
+            }
+
+            @media (width <= 768px)
+            {
+                top: 60px;
+                right: 0px;
+                width: 100%;
+                position: absolute;
+            }
+
+            @media (width > 768px)
+            {
+                display: flex;
+                flex-direction: row;
+            }
+
+            li
+            {
+
+                @media(width > 768px)
+                {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* #navList
 {
     ul
     {
@@ -11,4 +151,4 @@
         display: inline;
     }
     
-}
+} */
