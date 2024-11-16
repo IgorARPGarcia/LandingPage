@@ -1,4 +1,4 @@
-<p style="display: flex; flex-direction: row;">
+<p style="display: grid; grid-template: 1fr / repeat(2, 1fr);">
   <h3>
   Dark Theme
   </h3>
