@@ -1,4 +1,4 @@
-<p align="center">
+<p style="display: block">
   <h3>
   Dark Theme
   </h3>
