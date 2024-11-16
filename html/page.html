@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
             <p class="logo" >IARPG</p>
             <a class="menu-toggle" id="menu-toggle" aria-label="Menu button" 
@@ -31,50 +31,46 @@
         </nav>
     </header>
     <main>
-        <section id="home">
+        <section id="home" class="homeConfig">
             <h1>Introducing IARPG</h1>
             <p>Your solution to modern web design.</p>
-            <button>
+            <button class="learnMoreButton">
                 <a href="#features">
                     Learn More
                 </a>
             </button>
         </section>    
-        <section id="features">
+        <section id="features" class="featuresConfig">
             <h2>Features</h2>
-            <section>
-                <svg>
-
-                </svg>
-                <h3>
-                    Responsive Design
-                </h3>
-                <p>
-                    Modern media queries
-                </p>
-            </section>
-            <section>
-                <svg>
-
-                </svg>
-                <h3>
-                    Modern Aesthetics
-                </h3>
-                <p>
-                    Nested CSS
-                </p>
-            </section>
-            <section>
-                <svg>
-
-                </svg>
-                <h3>
-                    Easy Customization
-                </h3>
-                <p>
-                    @layer and container queries
-                </p>
-            </section>
+            <section class="featureList">
+                <section>
+                    <img class="image1" src="../icons/phone.svg" width="45" height="45">
+                    <h3>
+                        Responsive Design
+                    </h3>
+                    <p>
+                        Modern media queries
+                    </p>
+                </section>
+                <section>
+                    <img src="../icons/gridflex.svg" width="45" height="45">
+                    <h3>
+                        Modern Aesthetics
+                    </h3>
+                    <p>
+                        Nested CSS
+                    </p>
+                </section>
+                <section>
+                    <img src="../icons/arrowlongforward.svg" width="45" height="45">
+                    <h3>
+                        Easy Customization
+                    </h3>
+                    <p>
+                        @layer and container queries
+                    </p>
+                </section>
+            </section>  
         </section>
         <section id="aboutMe">
             <h2>About Me</h2>

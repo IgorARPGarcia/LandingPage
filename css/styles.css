@@ -1,4 +1,4 @@
-@layer reset, base, navigation;
+@layer reset, base, navigation, components;
 
 @layer reset
 {
@@ -24,7 +24,7 @@
     {
         --background-color: white;
         --text-color: black;
-        --primary-color: #48149b;
+        --primary-color: #6d064e;
         --secondary-color: #23414a;
         --light-background: #ffffff;
         --dark-background: #0a181d;
@@ -67,11 +67,13 @@
 
 @layer navigation
 {
+    
     header
     {
-        background: var(--light-background);
+        background: var(--dark-background);
         color: var(--light-text);
         padding: 20px;
+        border-block-end: solid 1px var(--primary-color);
 
         nav
         {
@@ -116,6 +118,7 @@
                 right: 0px;
                 width: 100%;
                 position: absolute;
+                z-index: 1000;
             }
 
             @media (width > 768px)
@@ -126,29 +129,111 @@
 
             li
             {
+                opacity: 0.8;
+                
+                &:hover
+                {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
 
+                margin: 0px;
                 @media(width > 768px)
                 {
                     margin-left: 1rem;
                 }
+
+                a
+                {
+                    display: block;
+                    padding: 1rem;
+
+                    &:hover
+                    {
+                        @media (width <= 768px)
+                        {
+                            background-color: var(--secondary-color);
+                            color: var(--light-var);
+                        }
+                    }
+                }
+
+                @media(width <= 768px)
+                {
+                    border-block-end: solid 1px var(--primary-color);
+                    opacity: 0.9;
+                    transition: background 0.3s, color 0.3s;
+                }
             }
         }
-
     }
-
 }
 
-/* #navList
+@layer components 
 {
-    ul
+    
+    .homeConfig
     {
-        display: grid;
-        grid-template: 1fr / repeat(5, 1fr);
+        background-image: url(../images/download-laptop-wallpaper-h4n6pox16lk6fxve.jpg);
+        background-position: center center;
+        background-size: cover;
+        color: var(--light-text);
+        text-align: center;
+        padding-block: 6rem;
+
+        h1
+        {
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+
+        p 
+        {
+            font-size: 1.50rem;
+            margin-block: 1rem;
+            opacity: 0.9;
+        }
+
+        .learnMoreButton
+        {
+            margin-block: 1.75rem;
+            font-size: 1.15rem;
+            padding-inline: 25px;
+            padding-block: 10px;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border-radius: 7px;
+            border: 0px;
+            opacity: 0.85;
+
+            &:hover
+            {
+                opacity: 1;
+                transition: 0.5s;
+            }
+        }
     }
 
-    li
+    h2
     {
-        display: inline;
+        font-size: 1.75rem;
     }
-    
-} */
+
+
+    #features
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        gap: 5rem;
+        padding-block: 2rem;
+    }
+
+    .featureList
+    {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr) ;
+    }
+}
