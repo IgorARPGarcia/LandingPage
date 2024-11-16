@@ -1,4 +1,4 @@
-<p>
+<p display="inline">
   <h3>
   Dark Theme
   </h3>
@@ -8,6 +8,4 @@
   </h3>
   <img src="themeGifs/lightTheme.gif">
 </p>
-<p>
-  
-</p>
+
