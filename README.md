@@ -1,4 +1,4 @@
-<section style="display: flex; flex-direction: row;">
+<section style="display: flex; flex-direction: column;">
   <p>
     <h3>
     Dark Theme
