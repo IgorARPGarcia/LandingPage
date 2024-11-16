@@ -1,4 +1,4 @@
-<section style="display: grid; grid-template: 1fr / repeat(2, 1fr);">
+<section style="display: grid; grid-template-column: 1fr 1fr;">
   <p>
     <h3>
     Dark Theme
