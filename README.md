@@ -1,4 +1,4 @@
-<p display="inline">
+<p <style>display="inline"</style>>
   <h3>
   Dark Theme
   </h3>
