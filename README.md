@@ -1,4 +1,4 @@
-<section>
+<section align="center">
   <p>
     <h3>
     Dark Theme
