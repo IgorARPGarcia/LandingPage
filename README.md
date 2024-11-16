@@ -2,5 +2,5 @@
   Dark theme
 </h3>
 <p>
-  <img src="gifTheme/darkTheme.gif">
+  <img src="themeGifs/darkTheme.gif">
 </p>
