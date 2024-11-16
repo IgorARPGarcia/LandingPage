@@ -1,4 +1,4 @@
-<p style="display: inline">
+<p style="display: flex">
   <h3>
   Dark Theme
   </h3>
