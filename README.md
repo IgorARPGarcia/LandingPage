@@ -1,4 +1,4 @@
-<p style="display: flex; flex-direction: rows">
+<p style="display: flex; flex-direction: row;">
   <h3>
   Dark Theme
   </h3>
