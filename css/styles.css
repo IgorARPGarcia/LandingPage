@@ -1,0 +1,364 @@
+@layer reset, base, navigation, components;
+
+@layer reset
+{
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+
+    html, body
+    {
+        width: 100%;
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+}
+
+@layer base
+{
+    :root
+    {
+        --background-color: white;
+        --text-color: #000000;
+        --primary-color: #6d064e;
+        --background: #ffffff;
+        --light-text: #ffffff;
+        --dark-text: #000000;
+        --inputBoxColor: #e9e9e9;
+    }
+
+    @media(prefers-color-scheme: dark)
+    {
+        :root
+        {
+            --text-color: #ffffff;
+            --primary-color: #6d064e;
+            --secondary-color: #09171b;
+            --background: #000000;
+            --inputBoxColor: #ffffff;
+        }
+    }
+}
+
+@layer base
+{
+    body
+    {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        line-height: 1.6;
+        background-color: var(--background);
+        color: var(--text-color);
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: inherit;
+    }
+
+}
+
+@layer navigation
+{
+    
+    header
+    {
+        background: var(--background);
+        color: var(--text-color);
+        padding: 20px;
+        border-block-end: solid 1px var(--primary-color);
+        border-radius: 10px;
+
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 15px;
+        }
+
+        .logo
+        {
+            font-size: 1.35rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle
+        {
+            font-size: 2rem;
+
+            @media (width > 768px)
+            {
+                display: none;
+            }
+        }
+
+        .navList
+        {
+            display: none;
+            background: var(--background);
+            text-align: right;
+            list-style: none;
+            flex-direction: column;
+
+            &.active
+            {
+                display: flex;
+            }
+
+            @media (width <= 768px)
+            {
+                top: 60px;
+                right: 0px;
+                width: 100%;
+                position: absolute;
+                z-index: 1000;
+            }
+
+            @media (width > 768px)
+            {
+                display: flex;
+                flex-direction: row;
+            }
+
+            li
+            {
+                opacity: 0.8;
+
+                &:hover
+                {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+
+                margin: 0px;
+                @media(width > 768px)
+                {
+                    margin-left: 1rem;
+                }
+
+                a
+                {
+                    display: block;
+                    padding: 1rem;
+
+                    &:hover
+                    {
+                        @media (width <= 768px)
+                        {
+                            background-color: var(--background);
+                            color: var(--text-color);
+                        }
+                    }
+                }
+
+                @media(width <= 768px)
+                {
+                    border-block-end: solid 1px var(--primary-color);
+                    opacity: 0.9;
+                    transition: background 0.3s, color 0.3s;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+@layer components 
+{
+
+    .homeConfig
+    {
+        background-image: url(/images/download-laptop-wallpaper-h4n6pox16lk6fxve.jpg);
+        background-position: center center;
+        background-size: cover;
+        color: var(--light-text);
+        text-align: center;
+        padding-block: 6rem;
+        
+        &:hover
+        {
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+
+        h1
+        {
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+
+        p 
+        {
+            font-size: 1.50rem;
+            margin-block: 1rem;
+            opacity: 0.9;
+        }
+
+        .learnMoreButton
+        {
+            margin-block: 1.75rem;
+            font-size: 1.15rem;
+            padding-inline: 25px;
+            padding-block: 10px;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border-radius: 7px;
+            border: 0px;
+            opacity: 0.85;
+
+            &:hover
+            {
+                opacity: 1;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    .svgConfig
+    {
+        color: var(--primary-color)
+    }
+
+    h2
+    {
+        font-size: 1.75rem;
+    }
+
+
+    #features
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        background-color: var(--background);
+        gap: 5rem;
+        padding-block-start: 1.50rem;
+        padding-block-end: 5rem;
+        border: solid 1px var(--primary-color);
+        border-radius: 10px;
+
+        h3
+        {   
+            font-size: 1.25rem;
+        }
+
+        p
+        {
+            font-size: 0.90rem;
+        }
+        
+    }
+
+    .featureList
+    {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr) ;
+
+        @media (width <= 768px)
+        {
+            display: flex;
+            flex-direction: column;
+            padding-block-end: 40px;
+            gap: 25px;
+        }
+    }
+
+    #aboutMe
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+        gap: 1.25rem;
+
+        h3 
+        {
+            font-size: 1.25rem;
+        }
+
+        p
+        {
+            font-size: 1.15rem;
+        }
+    }
+
+    .contactConfig
+    {
+        text-align: center;
+        border: solid 2px var(--primary-color);
+        border-radius: 10px;
+        padding-block: 3rem;
+        gap: 1.25rem;
+        
+        h2
+        {
+            padding-block-end: 1.25rem;
+        }
+
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            
+            p
+            {
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                width: 100%;
+                
+                input, textarea
+                {
+                    padding: 0.80rem 7rem;
+                    border-radius: 10px;
+                    border: 2px solid white;
+                    text-align: center;
+                    background-color: var(--inputBoxColor);
+                }
+
+                
+            }
+
+            button
+                {
+                    padding: 0.75rem 1.75rem;
+                    border-radius: 10px;
+                    background-color: var(--primary-color);
+                    border: var(--primary-color);
+                    color: var(--light-text);
+                    opacity: 0.9;
+
+                    &:hover
+                    {
+                        opacity: 1;
+                        transition: 0.3s;
+                    }
+
+                    &:has(input:not(:placeholder-shown))
+                    {
+                        background-color: var(--secondary-color);
+                    }
+                }
+        }    
+    }
+
+    #footer
+    {
+        text-align: center;
+        font-size: 1.15rem;
+        padding-block: 10px;
+        border-radius: 10px;
+    }
+
+
+}

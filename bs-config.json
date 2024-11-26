@@ -1,0 +1,13 @@
+{
+    "server": 
+    {
+      "baseDir": "./", 
+      "root": {
+        "/html": "./html",
+        "/css": "./css",   
+        "/javascript": "./javascript",
+        "/images": "./images"  
+    }
+}
+
+}
