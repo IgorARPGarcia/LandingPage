@@ -1,5 +1,8 @@
 <section align="center">
   <p>
+    Link: <a href="https://igorarpgarcia.github.io/LandingPage/">Landing Page</a>
+  </p>
+  <p>
     <h3>
     Dark Theme
     </h3>
