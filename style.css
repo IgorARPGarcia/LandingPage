@@ -337,6 +337,7 @@
                     border: var(--primary-color);
                     color: var(--light-text);
                     opacity: 0.9;
+                     cursor: pointer;
 
                     &:hover
                     {
