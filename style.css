@@ -342,6 +342,7 @@
                     {
                         opacity: 1;
                         transition: 0.3s;
+                        cursor: pointer;
                     }
 
                     &:has(input:not(:placeholder-shown))
