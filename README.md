@@ -1,12 +1,13 @@
 <section align="center">
-  <p>
+  <h3>Link da Página</h3>
+  <h2>
     Link: <a href="https://igorarpgarcia.github.io/LandingPage/">Landing Page</a>
-  </p>
+  </h2>
   <p>
     <h3>
     Dark Theme
     </h3>
-    <img src="themeGifs/darkTheme.gif">
+    <img width=1000 height=900 src="themeGifs/darkTheme.gif">
   </p>
   <p>
     <h3>
