@@ -18,13 +18,13 @@
     <h3>
     Dark Theme
     </h3>
-    <img width=1000 height=900 src="themeGifs/darkTheme.gif">
+    <img width=800 height=600 src="themeGifs/darkTheme.gif">
   </p>
   <p>
     <h3>
     Light Theme
     </h3>
-    <img src="themeGifs/lightTheme.gif">
+    <img width=800 height=600 src="themeGifs/lightTheme.gif">
   </p>
 </section>
 
