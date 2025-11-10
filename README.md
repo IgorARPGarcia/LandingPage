@@ -1,4 +1,4 @@
-<div>
+<div align=center>
   <h2>Landing Page em HTML/CSS e TypeScript</h2>
   <p>
     Desenvolvi uma Landing Page com ênfase na estética e na experiência visual, com o objetivo de aprimorar
